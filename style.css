@@ -1,9 +1,4 @@
-html {
-    overflow: hidden;
-    height: 100%;
-    background: #191919;
-    width: 100%;
-}
+
 
 #canvas {
     background: url('https://marclopezavila.github.io/planet-defense-game/img/space.jpg') no-repeat;

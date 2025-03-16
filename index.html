@@ -2,16 +2,49 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>JS Planet defense game</title>
+  <meta http-equiv="refresh" content="5;url=inner.html" />
+  <title>Planet defense game</title>
   <link rel="stylesheet" href="https://public.codepenassets.com/css/reset-2.0.min.css">
-<link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css">
 
 </head>
+<style>
+        body{
+          background: url('inner-banner.jpg');
+          /* Make image center */
+            background-position: center center;
+
+            /* Make image fixed */
+            background-attachment: fixed;
+
+            /* Not repeat images */
+            background-repeat: no-repeat;
+
+            /* Set background size auto */
+            background-size: cover;
+}
+ @media only screen and (max-width: 767px) {
+            body {
+                background-image: url('inner-banner.jpg');
+                /* Make image center */
+            background-position: center center;
+
+            /* Make image fixed */
+            background-attachment: fixed;
+
+            /* Not repeat images */
+            background-repeat: no-repeat;
+
+            /* Set background size auto */
+            background-size: cover;
+            }
+        }
+    </style>
 <body>
 <!-- partial:index.partial.html -->
 <body>
-    <canvas id="canvas"></canvas>
-    <a href="https://codepen.io/Loopez10/full/dMaVdQ" class="full-screen" target="_blank"></a>
+    <!-- <canvas id="canvas"></canvas>
+    <a href="https://codepen.io/Loopez10/full/dMaVdQ" class="full-screen" target="_blank"></a> -->
 </body>
 <!-- partial -->
   <script  src="./script.js"></script>
