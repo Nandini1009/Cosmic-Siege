@@ -2,15 +2,15 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="5;url=inner.html" />
+  <meta http-equiv="refresh" content="25;url=inner.html" />
   <title>Planet defense game</title>
-  <link rel="stylesheet" href="https://public.codepenassets.com/css/reset-2.0.min.css">
+  <link rel="stylesheet" href="./main.css">
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <style>
         body{
-          background: url('inner-banner.jpg');
+          background: url('wallpaper.jpg');
           /* Make image center */
             background-position: center center;
 
@@ -23,26 +23,70 @@
             /* Set background size auto */
             background-size: cover;
 }
- @media only screen and (max-width: 767px) {
-            body {
-                background-image: url('inner-banner.jpg');
-                /* Make image center */
-            background-position: center center;
 
-            /* Make image fixed */
-            background-attachment: fixed;
+        html, body {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+}
 
-            /* Not repeat images */
-            background-repeat: no-repeat;
+.loader {
+  width: 60px;
+}
 
-            /* Set background size auto */
-            background-size: cover;
-            }
-        }
+.loader-wheel {
+  animation: spin 1s infinite linear;
+  border: 2px solid rgba(30, 30, 30, 0.5);
+  border-left: 4px solid #fff;
+  border-radius: 50%;
+  height: 50px;
+  margin-bottom: 10px;
+  width: 50px;
+}
+
+.loader-text {
+  color: #fff;
+  font-weight: 700;
+  font-family: arial, sans-serif;
+}
+
+.loader-text:after {
+  content: 'Loading';
+  animation: load 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load {
+  0% {
+    content: 'Loading';
+  }
+  33% {
+    content: 'Loading.';
+  }
+  67% {
+    content: 'Loading..';
+  }
+  100% {
+    content: 'Loading...';
+  }
+}      
     </style>
+
 <body>
-<!-- partial:index.partial.html -->
-<body>
+  <div class="loader">
+  <div class="loader-wheel"></div>
+  <div class="loader-text"></div>
+</div>
     <!-- <canvas id="canvas"></canvas>
     <a href="https://codepen.io/Loopez10/full/dMaVdQ" class="full-screen" target="_blank"></a> -->
 </body>
